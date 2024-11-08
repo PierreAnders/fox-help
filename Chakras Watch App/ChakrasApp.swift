@@ -11,7 +11,8 @@ import SwiftUI
 struct Chakras_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainMenuView()
+//            MainMenuView()
+            ContentView()
         }
     }
 }

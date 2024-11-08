@@ -55,9 +55,39 @@
 		B9E641EA2CDC36730005F692 /* Chakras Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chakras Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B948B4242CDD714D00A13FDE /* Exceptions for "Chakras Watch App" folder in "Chakras" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"fox-pic.png",
+				fox.png,
+			);
+			target = B9E641C72CDC36720005F692 /* Chakras */;
+		};
+		B948B4252CDD714D00A13FDE /* Exceptions for "Chakras Watch App" folder in "Chakras Watch AppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"fox-pic.png",
+			);
+			target = B9E641DF2CDC36730005F692 /* Chakras Watch AppTests */;
+		};
+		B948B4262CDD714D00A13FDE /* Exceptions for "Chakras Watch App" folder in "Chakras Watch AppUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"fox-pic.png",
+			);
+			target = B9E641E92CDC36730005F692 /* Chakras Watch AppUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B9E641D22CDC36720005F692 /* Chakras Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B948B4242CDD714D00A13FDE /* Exceptions for "Chakras Watch App" folder in "Chakras" target */,
+				B948B4252CDD714D00A13FDE /* Exceptions for "Chakras Watch App" folder in "Chakras Watch AppTests" target */,
+				B948B4262CDD714D00A13FDE /* Exceptions for "Chakras Watch App" folder in "Chakras Watch AppUITests" target */,
+			);
 			path = "Chakras Watch App";
 			sourceTree = "<group>";
 		};
