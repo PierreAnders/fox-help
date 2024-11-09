@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PixelArtView: View {
-    let pixelSize: CGFloat = 3
+    let pixelSize: CGFloat = 2
     let totalWidth: CGFloat = 100
 
       let colors: [[Color]] = [
