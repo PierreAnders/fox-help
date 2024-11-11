@@ -11,7 +11,6 @@ struct PixelLetterView: View {
     let pixelSize: CGFloat = 2.2
     let spacing: CGFloat = 0
     
-    // Exemple de dictionnaire de lettres en pixel
     let alphabet: [Character: [[Color]]] = [
         " ": [[.clear],
             [.clear],
@@ -300,6 +299,9 @@ struct PixelLetterView: View {
     ]
     
     let text: String
+    
+    var primaryColor: Color = .white
+    var backgroundColor: Color = .clear
 
         var body: some View {
             HStack(spacing: spacing) {
@@ -310,13 +312,12 @@ struct PixelLetterView: View {
                                 HStack(spacing: spacing) {
                                     ForEach(0..<pixels[row].count, id: \.self) { col in
                                         Rectangle()
-                                            .fill(pixels[row][col])
+                                            .fill(pixels[row][col] == .white ? primaryColor : backgroundColor)
                                             .frame(width: pixelSize, height: pixelSize)
                                     }
                                 }
                             }
                         }
-                        // Ajout d'un identifiant unique basé sur l'index et le caractère
                         .id(UUID())
                     }
                 }
