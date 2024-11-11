@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct ProfileView: View {
-
+    @AppStorage("userName") var userName: String = ""  // Récupère le nom sauvegardé ou vide par défaut
+    
     var user: User = User(
-        name: "P i e r r e   U n t a s",
+        name: "john doe",
         intelligence: 75,
         energy: 85,
         force: 90,
@@ -15,12 +16,16 @@ struct ProfileView: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 20) {
-                    // Utilisation de PixelLetterView avec des couleurs personnalisées pour le nom
-                    PixelLetterView(text: user.name.uppercased(), primaryColor: .gray, backgroundColor: .black)
+                    // Affichage du nom de l'utilisateur ou "Choisir un nom" si non défini
+                    NavigationLink(destination: NameCreationView()) {
+                        PixelLetterView(
+                            text: (userName.isEmpty ? "Choisir un Nom" : userName).uppercased()
+                        )
                         .padding(.top, 20)
+                    }
+                    .buttonStyle(PlainButtonStyle())
                     
                     VStack(spacing: 15) {
-                        // Passer des couleurs personnalisées à PixelIconView et PixelLetterView
                         CharacteristicRow(symbolText: "lightning", characteristicName: " E n e r g i e", value: formatNumber(user.energy), primaryColor: .yellow, destinationView: EnergyView())
                         CharacteristicRow(symbolText: "book", characteristicName: " I n t e l l i g e n c e", value: formatNumber(user.intelligence), primaryColor: .blue, destinationView: IntelligenceView())
                         CharacteristicRow(symbolText: "hand", characteristicName: " F o r c e", value: formatNumber(user.force), primaryColor: .red, destinationView: StrengthView())
@@ -31,7 +36,6 @@ struct ProfileView: View {
                 }
             }
         }
-//        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func formatNumber(_ number: Int) -> String {

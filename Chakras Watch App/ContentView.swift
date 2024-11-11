@@ -30,21 +30,21 @@ struct ContentView: View {
             HKObjectType.quantityType(forIdentifier: .heartRate)!,
             HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
             HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
-            HKObjectType.quantityType(forIdentifier: .vo2Max)!,
-            HKObjectType.categoryType(forIdentifier: .mindfulSession)!,
-            HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
+            HKObjectType.quantityType(forIdentifier:.vo2Max)!,
+            HKObjectType.categoryType(forIdentifier:.mindfulSession)!,
+            HKObjectType.categoryType(forIdentifier:.sleepAnalysis)!
         ]
 
-        healthStore.requestAuthorization(toShare: nil, read: healthKitTypesToRead) { success, error in
-            if success {
-                print("Autorisation réussie")
-            } else if let error = error {
-                print("Erreur lors de la demande d'autorisation : \(error.localizedDescription)")
-            }
-        }
-    }
+        healthStore.requestAuthorization(toShare:nil, read :healthKitTypesToRead) { success,error in
+            if success{
+               print("Autorisation réussie")
+           } else if let error=error{
+               print("Erreur lors de la demande d'autorisation : \(error.localizedDescription)")
+           }
+       }
+   }
 }
 
-#Preview {
-    ContentView()
+#Preview{
+   ContentView()
 }
