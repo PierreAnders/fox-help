@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PixelLetterView: View {
-    let pixelSize: CGFloat = 4
-    let spacing: CGFloat = 0.5
+    let pixelSize: CGFloat = 2.2
+    let spacing: CGFloat = 0
     
     // Exemple de dictionnaire de lettres en pixel
     let alphabet: [Character: [[Color]]] = [
@@ -270,6 +270,32 @@ struct PixelLetterView: View {
             [.white, .clear, .white],
             [.white, .clear, .white],
             [.clear, .white, .clear]
+        ],
+        "^": [
+            [.clear, .white, .white, .white, .clear, .clear, .white, .white, .white, .clear],
+            [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white],
+            [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white],
+
+            [.white, .white, .white, .white, .white, .white, .white, .white, .white, .white],
+            [.clear, .white, .white, .white, .white, .white, .white, .white, .white, .clear],
+            [.clear, .clear, .white, .white, .white, .white, .white, .white, .clear, .clear],
+            [.clear, .clear, .clear, .white, .white, .white, .white, .clear, .clear, .clear],
+            [.clear, .clear, .clear, .clear, .white, .white, .clear, .clear, .clear, .clear],
+        ],
+        "*": [
+            [.clear, .clear, .clear, .clear, .clear, .white],
+            [.clear, .clear, .clear, .clear, .white, .clear],
+            [.clear, .clear, .clear, .white, .white, .clear],
+            [.clear, .clear, .white, .white, .clear, .clear],
+            [.clear, .clear, .white, .white, .clear, .clear],
+            [.clear, .white, .white, .white, .clear, .clear],
+            [.white, .white, .white, .white, .white, .white],
+            [.clear, .clear, .white, .white, .white, .clear],
+            [.clear, .clear, .white, .white, .clear, .clear],
+            [.clear, .clear, .white, .white, .clear, .clear],
+            [.clear, .white, .white, .clear, .clear, .clear],
+            [.clear, .white, .clear, .clear, .clear, .clear],
+            [.white, .clear, .clear, .clear, .clear, .clear],
         ]
     ]
     
