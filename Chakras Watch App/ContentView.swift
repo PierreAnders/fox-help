@@ -17,7 +17,7 @@ struct ContentView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 
-                PixelLetterView(text: "H I   F O L K S")
+                PixelLetterView(text: "H E L L O   W O R L D")
                     .frame(width: 100, height: 30)
             }
             .onAppear(perform: requestHealthKitAuthorization)
