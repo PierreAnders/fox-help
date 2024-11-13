@@ -1,10 +1,3 @@
-//
-//  IntelligenceView.swift
-//  Chakras
-//
-//  Created by Pierre Untas on 11/11/2024.
-//
-
 import SwiftUI
 import HealthKit
 
